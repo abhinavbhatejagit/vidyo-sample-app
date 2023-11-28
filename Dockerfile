@@ -1,7 +1,7 @@
-FROM node
-WORKDIR /app
-COPY package.json /app
-RUN npm cache clean --force
-COPY . /app
-CMD npm start
+FROM node:8.9-alpine
+WORKDIR /src
+COPY package*.json ./
+RUN npm install
+COPY . .
 EXPOSE 8080
+CMD [ "npm" , "start" ]
