@@ -4,4 +4,4 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 8080
-CMD [ "npm", "start", "-a", "0.0.0.0" ]
+CMD [ "npm" , "start" ]
