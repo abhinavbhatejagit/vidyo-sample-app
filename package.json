@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install && http-server -a 127.0.0.1"
+    "start": "npm install && http-server -a 127.0.0.1 -p 80"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/VidyoAPI-SDK/nativeWebRTC-getting-started-sample#readme",
   "dependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "nginx": "^1.0.8"
   },
   "stackblitz": {
     "startCommand": "http-server"

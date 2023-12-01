@@ -1,7 +1,7 @@
-FROM node:8.9-alpine
+FROM node:14 as builder
 WORKDIR /src
 COPY package*.json ./
 RUN npm install
-COPY . .
+COPY . /src
 EXPOSE 80
 CMD [ "npm" , "start" ]

@@ -9,16 +9,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
+  - host: sample-app
   - http:
       paths:
-      - path: /(/|$)(.*)
-        pathType: Prefix
-        backend:
-          service:
-            name: sample-app
-            port:
-              number: 80
-      - path: /(.*)
+      - path: /src
         pathType: Prefix
         backend:
           service:
