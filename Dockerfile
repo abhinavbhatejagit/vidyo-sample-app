@@ -1,4 +1,4 @@
-FROM node:14 as builder
+FROM node:18-alpine3.17 as builder
 WORKDIR /src
 COPY package*.json ./
 RUN npm install
